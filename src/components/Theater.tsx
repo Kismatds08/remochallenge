@@ -2,6 +2,8 @@ import * as React from 'react';
 import './Theater.scss'; 
 import MapImage from '../assets/conference-map.svg';
 import TableConfig from './tableConfig.json';
+import {database} from 'firebase';
+import auth from '../services/firebase'
 
 const Theater: React.FC = () => {
   const firstTable = TableConfig.tables[0];

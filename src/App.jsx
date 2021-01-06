@@ -1,11 +1,12 @@
 import React from 'react'
 import Auth from "./components/Auth";
-import {Switch, Router} from 'react-router-dom'
+import {Switch, Route, Router} from 'react-router-dom'
 import {auth, createUserProfileDocument} from './services/firebase/firebase'
 import {connect} from 'react-redux'
 import {setCurrentUser} from './reducers/gameDataReducer'
 import './App.scss'
 import Theater from 'components/Theater';
+
 
 
 class App extends React.Component {
@@ -42,8 +43,8 @@ class App extends React.Component {
       <div>
         <Router>
           <Switch>
-              <Router exact path='/' component={Auth} />
-              <Router path='/shop' component={Theater} />
+              <Route exact path='/' component={Auth} />
+              <Route path='/shop' component={Theater} />
           </Switch>
        </Router>
       </div>
